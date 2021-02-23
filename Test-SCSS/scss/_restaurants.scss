@@ -1,0 +1,25 @@
+@import "./variables";
+
+.image-fond {
+  position: absolute;
+  z-index: 0;
+}
+
+.restaurant {
+  &__menu {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    top: -60px;
+    background-color: $bg-gris-clair;
+    padding-top: 45px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  &__titre {
+    margin-top: 0;
+    margin-left: 20px;
+    font-size: 1em;
+    font-weight: 300;
+  }
+}

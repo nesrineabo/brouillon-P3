@@ -1,0 +1,43 @@
+@import "./variables";
+
+footer {
+  background: $footer-bg;
+}
+
+.footer-menu {
+  @include padding-footer;
+  color: white;
+  display: flex;
+  flex-direction: column;
+
+  & > img {
+    width: 100px;
+    height: 20px;
+    padding-bottom: 20px;
+  }
+
+  & > a {
+    margin-bottom: 8px;
+  }
+
+  & > a:hover {
+    text-decoration: underline;
+  }
+}
+
+.footer-logo {
+  color: white;
+  font-family: $titre-logo;
+  padding-bottom: 20px;
+  font-size: 1.05em;
+}
+
+.fa-utensils {
+  font-size: 0.938em;
+  padding-right: 9px;
+}
+
+.fa-hands-helping {
+  font-size: 0.688em;
+  padding-right: 6px;
+}
