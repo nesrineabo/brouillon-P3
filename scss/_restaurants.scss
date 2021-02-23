@@ -1,0 +1,102 @@
+@import "./variables";
+
+.image-fond {
+  position: absolute;
+  z-index: 0;
+}
+
+.restaurant {
+  &__menu {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    top: -60px;
+    background-color: $bg-gris-clair;
+    padding-top: 25px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  &__titre {
+    margin-top: 0;
+    margin-left: 20px;
+    margin-right: 38px;
+
+    .coeur-bg {
+      position: absolute;
+      left: 18.559rem;
+      color: transparent;
+      font-size: 26px;
+    }
+
+    h1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .coeur-bg:hover {
+      background: linear-gradient(
+        176deg,
+        rgba(255, 121, 218, 1) 0%,
+        rgba(147, 86, 220, 1) 100%
+      );
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+    }
+  }
+
+  &__entrees--titre {
+    @include margin-carte;
+    @include titre-section;
+  }
+
+  &__plat--titre {
+    @include margin-carte;
+    @include titre-section;
+  }
+
+  &__dessert--titre {
+    @include margin-carte;
+    @include titre-section;
+  }
+}
+
+.titre-decoration {
+  @include deco-carte;
+}
+
+.carte {
+  @include carte-contour;
+
+  h4 {
+    margin: 0;
+    padding-top: 15px;
+    font-weight: 500;
+  }
+
+  p {
+    margin: 0;
+    padding-top: 6px;
+    padding-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    font-size: 15px;
+  }
+
+  p :not(.prix) {
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 250px;
+  }
+
+  .prix {
+    font-weight: 500;
+  }
+}
+
+.commander {
+  @include bouton;
+}
