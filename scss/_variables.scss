@@ -50,7 +50,7 @@ ol {
   padding: 0;
 }
 
-@mixin accueil {
+@mixin mobile {
   @media screen and (max-width: 500px) {
     .header-accueil {
       display: flex;
@@ -67,18 +67,16 @@ ol {
 }
 
 @mixin header-restaurants {
-  @media screen and (max-width: 500px) {
-    .header-accueil {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-      padding-bottom: 17px;
-      border-bottom: 2px solid #cfcfcf;
-    }
-    .fa-arrow-left {
-      align-items: center;
-      justify-content: flex-start;
-    }
+  .header-accueil {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding-bottom: 17px;
+    border-bottom: 2px solid #cfcfcf;
+  }
+  .fa-arrow-left {
+    align-items: center;
+    justify-content: flex-start;
   }
 }
 
@@ -171,4 +169,7 @@ ol {
   margin-top: 15px;
   margin-left: 14px;
   margin-right: 14px;
+}
+
+@mixin mobile {
 }

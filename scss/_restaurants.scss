@@ -5,6 +5,17 @@
   z-index: 0;
 }
 
+.restaurant-contenu {
+}
+
+header {
+  @include header-restaurants;
+}
+
+.fa-arrow-left {
+  @include fleche-gauche;
+}
+
 .restaurant {
   &__menu {
     border-top-left-radius: 40px;
@@ -97,6 +108,16 @@
   }
 }
 
+.bouton-commander {
+  margin-top: 45px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+}
+
 .commander {
+  font-size: 1em;
   @include bouton;
+  border: none;
+  cursor: pointer;
 }
