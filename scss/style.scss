@@ -67,7 +67,9 @@ a {
     margin-right: 30px;
     font-weight: 100;
   }
+}
 
+.bouton {
   @include bouton;
 }
 
