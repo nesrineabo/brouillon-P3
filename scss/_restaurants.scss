@@ -1,12 +1,10 @@
 @import "./variables";
+@import "./animations";
 
-.image-fond {
+/*.image-fond {
   position: absolute;
   z-index: 0;
-}
-
-.restaurant-contenu {
-}
+}*/
 
 header {
   @include header-restaurants;
@@ -16,16 +14,28 @@ header {
   @include fleche-gauche;
 }
 
+.image-fond {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  position: relative;
+  z-index: 0;
+}
+
 .restaurant {
   &__menu {
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    top: -60px;
+    top: -40px;
+    bottom: 60px;
     background-color: $bg-gris-clair;
-    padding-top: 25px;
+    //padding-top: 25px;
     position: relative;
     overflow: hidden;
     z-index: 1;
+    height: auto;
+    padding: 0;
+    margin: 0;
   }
   &__titre {
     margin-top: 0;
@@ -40,19 +50,12 @@ header {
     }
 
     h1 {
+      font-size: 1.7em;
+      margin-top: 35px;
+      margin-bottom: 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
-    }
-
-    .coeur-bg:hover {
-      background: linear-gradient(
-        176deg,
-        rgba(255, 121, 218, 1) 0%,
-        rgba(147, 86, 220, 1) 100%
-      );
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
     }
   }
 
@@ -73,7 +76,10 @@ header {
 }
 
 .titre-decoration {
-  @include deco-carte;
+  border-bottom: 3px solid $couleur-tertiaire;
+  //display: block;
+  padding-top: 8px;
+  width: 40px;
 }
 
 .carte {
@@ -117,7 +123,11 @@ header {
 
 .commander {
   font-size: 1em;
+  width: 186px;
+  height: 50px;
   @include bouton;
   border: none;
   cursor: pointer;
 }
+
+@include carte-animation;

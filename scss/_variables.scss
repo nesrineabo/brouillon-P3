@@ -143,12 +143,14 @@ ol {
 }
 
 @mixin margin-carte {
+  margin-top: 45px;
   margin-left: 20px;
 }
 
 @mixin titre-section {
   h4 {
     font-weight: 300;
+    margin-top: 0;
     margin-bottom: 0;
   }
 }

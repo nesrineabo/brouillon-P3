@@ -1,0 +1,52 @@
+@mixin carte-animation {
+  .carte-entree-1__details-1 {
+    animation: anim-carte 1000ms 200ms ease-in-out backwards;
+  }
+
+  .carte-entree-1__details-2 {
+    animation: anim-carte 1000ms 400ms ease-in-out backwards;
+  }
+
+  .carte-entree-1__details-3 {
+    animation: anim-carte 1000ms 600ms ease-in-out backwards;
+  }
+
+  .carte-entree-1__details-4 {
+    animation: anim-carte 1000ms 800ms ease-in-out backwards;
+  }
+
+  .carte-plat-2__details-1 {
+    animation: anim-carte 1000ms 1000ms ease-in-out backwards;
+  }
+
+  .carte-plat-2__details-2 {
+    animation: anim-carte 1000ms 1200ms ease-in-out backwards;
+  }
+
+  .carte-plat-2__details-3 {
+    animation: anim-carte 1000ms 1400ms ease-in-out backwards;
+  }
+
+  .carte-dessert-3__details-1 {
+    animation: anim-carte 1000ms 1800ms ease-in-out backwards;
+  }
+
+  .carte-dessert-3__details-2 {
+    animation: anim-carte 1000ms 2000ms ease-in-out backwards;
+  }
+
+  .carte-dessert-3__details-3 {
+    animation: anim-carte 1000ms 2200ms ease-in-out backwards;
+  }
+
+  @keyframes anim-carte {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+}
