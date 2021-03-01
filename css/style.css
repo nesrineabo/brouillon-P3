@@ -394,6 +394,40 @@ header .fa-arrow-left {
   }
 }
 
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .fonctionnement {
+    margin: 0;
+  }
+  .fonctionnement__contenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 0;
+  }
+  .fonctionnement li {
+    margin-right: 0;
+  }
+  .fonctionnement__liste {
+    width: 375px;
+  }
+  .restaurants__cartes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .carte-restaurants__contenu {
+    width: 450px;
+  }
+  .carte-restaurants__image {
+    width: 100%;
+  }
+}
+
 body {
   margin: 0;
 }

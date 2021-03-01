@@ -4,6 +4,8 @@
 @import "./restaurants";
 @import "./animations";
 
+@include desktop;
+
 body {
   margin: 0;
 }

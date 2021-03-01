@@ -173,5 +173,41 @@ ol {
   margin-right: 14px;
 }
 
-@mixin mobile {
+@mixin desktop {
+  @media screen and (min-width: 769px) and (max-width: 1440px) {
+    .fonctionnement {
+      margin: 0;
+
+      &__contenu {
+        display: flex;
+        margin-right: 0;
+      }
+
+      li {
+        margin-right: 0;
+      }
+
+      &__liste {
+        width: 375px;
+      }
+    }
+
+    .restaurants {
+      &__cartes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    }
+
+    .carte-restaurants {
+      &__contenu {
+        width: 450px;
+      }
+
+      &__image {
+        width: 100%;
+      }
+    }
+  }
 }
