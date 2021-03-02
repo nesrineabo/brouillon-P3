@@ -13,6 +13,12 @@ $paragraphe: "Roboto", sans-serif;
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: $paragraphe;
 }
@@ -48,22 +54,6 @@ ul {
 ol {
   margin: 0;
   padding: 0;
-}
-
-@mixin mobile {
-  @media screen and (max-width: 500px) {
-    .header-accueil {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-      padding-bottom: 17px;
-      border-bottom: 2px solid #cfcfcf;
-
-      & > a > .fa-arrow-left {
-        display: none;
-      }
-    }
-  }
 }
 
 @mixin header-restaurants {
@@ -115,6 +105,10 @@ ol {
   box-shadow: 0px 8px 20px 3px rgba(0, 0, 0, 0.1);
 }
 
+@mixin shadow-hover {
+  box-shadow: 0px 8px 20px 3px rgba(0, 0, 0, 0.25);
+}
+
 @mixin bouton {
   color: white;
   font-weight: 500;
@@ -122,6 +116,14 @@ ol {
   border-radius: 80px;
   @include gradient;
   @include shadow;
+}
+
+@mixin bouton-hover {
+  color: white;
+  font-weight: 500;
+  padding: 1.02em 1.5em;
+  border-radius: 80px;
+  @include shadow-hover;
 }
 
 @mixin fleche-gauche {
@@ -173,6 +175,24 @@ ol {
   margin-right: 14px;
 }
 
+/* MEDIA QUERIES */
+
+@mixin mobile {
+  @media screen and (max-width: 500px) {
+    .header-accueil {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      padding-bottom: 17px;
+      border-bottom: 2px solid #cfcfcf;
+
+      & > a > .fa-arrow-left {
+        display: none;
+      }
+    }
+  }
+}
+
 @mixin desktop {
   @media screen and (min-width: 769px) and (max-width: 1440px) {
     .fonctionnement {
@@ -207,6 +227,21 @@ ol {
 
       &__image {
         width: 100%;
+      }
+    }
+
+    .restaurant-contenu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-flow: row wrap;
+    }
+
+    .restaurant {
+      &__entrees,
+      &__plat,
+      &__dessert {
+        width: 400px;
       }
     }
   }
