@@ -42,12 +42,7 @@ header {
     margin-left: 20px;
     margin-right: 38px;
 
-    .coeur-bg {
-      position: absolute;
-      left: 18.559rem;
-      color: transparent;
-      font-size: 26px;
-    }
+    @include anim-coeur;
 
     h1 {
       font-size: 1.7em;
@@ -84,6 +79,7 @@ header {
 
 .carte {
   @include carte-contour;
+  display: flex;
 
   h4 {
     margin: 0;
@@ -91,27 +87,45 @@ header {
     font-weight: 500;
   }
 
-  p {
-    margin: 0;
-    padding-top: 6px;
-    padding-bottom: 16px;
+  /*&:hover,
+  .choix-menu {
+    background-color: $couleur-tertiaire;
+    transform: scale(1);
+    transform-origin: 50% 0%;
+    transition: 800ms;
+    width: 60px;
+  }*/
+
+  /*.choix-menu {
+    background-color: #99e2d0;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    text-align: center;
+    padding-top: 25px;
+    color: white;
+    height: auto;
     display: flex;
-    justify-content: space-between;
-    font-weight: 300;
-    font-size: 15px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 0;
+    transition: 500ms;
   }
 
-  p :not(.prix) {
-    display: inline-block;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 250px;
-  }
+  .icone-check {
+    transform: rotate(-360deg);
+    opacity: 0;
+    font-size: 20px;
+    transition: 700ms;
+    position: absolute;
+    bottom: 25px;
 
-  .prix {
-    font-weight: 500;
-  }
+    &:hover {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }*/
 }
 
 .bouton-commander {
@@ -129,5 +143,3 @@ header {
   border: none;
   cursor: pointer;
 }
-
-@include carte-animation;

@@ -2,6 +2,12 @@ $couleur-primaire: #9356dc;
 $couleur-secondaire: #ff79da;
 $couleur-tertiaire: #99e2d0;
 
+$gradient: linear-gradient(
+  176deg,
+  rgba(255, 121, 218, 1) 0%,
+  rgba(147, 86, 220, 1) 100%
+);
+
 $footer-bg: #353535;
 
 $bg-gris-clair: #f6f6f6;
@@ -17,6 +23,11 @@ $paragraphe: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+span {
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -166,10 +177,10 @@ ol {
 
 @mixin carte-contour {
   background-color: white;
-  border-radius: 15px;
+  border-radius: 16px;
   @include shadow;
   padding-left: 10px;
-  padding-right: 23px;
+  padding-right: 22px;
   margin-top: 15px;
   margin-left: 14px;
   margin-right: 14px;
@@ -193,7 +204,7 @@ ol {
   }
 }
 
-@mixin desktop {
+/* @mixin desktop {
   @media screen and (min-width: 769px) and (max-width: 1440px) {
     .fonctionnement {
       margin: 0;
@@ -201,14 +212,6 @@ ol {
       &__contenu {
         display: flex;
         margin-right: 0;
-      }
-
-      li {
-        margin-right: 0;
-      }
-
-      &__liste {
-        width: 375px;
       }
     }
 
@@ -246,3 +249,4 @@ ol {
     }
   }
 }
+*/
