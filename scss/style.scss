@@ -35,6 +35,7 @@ a {
   justify-content: center;
   padding: 20px 0;
   border-top: 1px solid #cfcfcf;
+  border-top-style: ;
 
   & > .fa-map-marker-alt {
     padding-right: 17px;
@@ -225,4 +226,4 @@ a {
   }
 }
 
-/* @include desktop; */
+@include desktop;
