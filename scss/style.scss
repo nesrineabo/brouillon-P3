@@ -4,8 +4,6 @@
 @import "./restaurants";
 @import "./variables";
 
-@include non-mobile;
-
 /* Mise en page approche : Mobile-First */
 
 /* Disposition Logo SVG Header */
@@ -129,7 +127,6 @@
 }
 
 .restaurants {
-  @include non-mobile;
   background-color: $bg-gris-clair;
   padding-top: 60px;
 
@@ -202,3 +199,5 @@
 
   @include coeur;
 }
+
+@include non-mobile;

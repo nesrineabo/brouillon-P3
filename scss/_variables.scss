@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+
+/* Font + Couleurs */
+
 $couleur-primaire: #9356dc;
 $couleur-secondaire: #ff79da;
 $couleur-tertiaire: #99e2d0;
@@ -11,7 +16,7 @@ $pastille: #008766;
 $titre-logo: "Shrikhand", cursive;
 $paragraphe: "Roboto", sans-serif;
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+/* Css Reset */
 
 * {
   margin: 0;
@@ -19,30 +24,19 @@ $paragraphe: "Roboto", sans-serif;
   box-sizing: border-box;
 }
 
+/* Variables Générales */
+
 body {
+  margin: 0;
   font-family: $paragraphe;
 }
 
-h1 {
-  font-family: $titre-logo;
-}
-
 a {
-  color: inherit;
   text-decoration: none;
 }
 
-@mixin padding-footer {
-  padding-left: 24px;
-  padding-top: 25px;
-  padding-bottom: 36px;
-}
-
-@mixin flexcenter-direction($direction) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: $direction;
+a:hover {
+  text-decoration: none;
 }
 
 ul {
@@ -56,25 +50,12 @@ ol {
   padding: 0;
 }
 
-@mixin header-restaurants {
-  .header-accueil {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    padding-bottom: 17px;
-    border-bottom: 2px solid #cfcfcf;
-  }
-  .fa-arrow-left {
-    align-items: center;
-    justify-content: flex-start;
-  }
+@mixin shadow {
+  box-shadow: 0px 8px 20px 3px rgba(0, 0, 0, 0.1);
 }
 
-@mixin flexcenter($direction, $wrap) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: $direction $wrap;
+@mixin shadow-hover {
+  box-shadow: 0px 8px 20px 3px rgba(0, 0, 0, 0.25);
 }
 
 @mixin gradient {
@@ -86,54 +67,21 @@ ol {
   );
 }
 
-@mixin fonctionnement-liste {
-  list-style-type: none;
-  padding: 30px 0 30px 32px;
-  background-color: white;
-  margin-bottom: 24px;
-  border-radius: 20px;
-  margin-left: 14px;
+@mixin flexcenter($direction, $wrap) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: $direction $wrap;
 }
 
-@mixin icone {
-  color: #7e7e7e;
-  padding-right: 25px;
-  font-size: 1em;
+@mixin flexcenter-direction($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
 }
 
-@mixin shadow {
-  box-shadow: 0px 8px 20px 3px rgba(0, 0, 0, 0.1);
-}
-
-@mixin shadow-hover {
-  box-shadow: 0px 8px 20px 3px rgba(0, 0, 0, 0.25);
-}
-
-@mixin bouton {
-  color: white;
-  font-weight: 500;
-  padding: 1.02em 1.5em;
-  border-radius: 80px;
-  @include gradient;
-  @include shadow;
-}
-
-@mixin bouton-hover {
-  color: white;
-  font-weight: 500;
-  padding: 1.02em 1.5em;
-  border-radius: 80px;
-  @include shadow-hover;
-}
-
-@mixin fleche-gauche {
-  position: absolute;
-  font-size: 20px;
-  top: 30px;
-  left: 11px;
-  margin-left: 20px;
-  margin-right: 63px;
-}
+/* Variables Coeur */
 
 @mixin coeur {
   .coeur {
@@ -156,6 +104,50 @@ ol {
   }
 }
 
+/* Variables Section Fonctionnement */
+
+@mixin fonctionnement-liste {
+  list-style-type: none;
+  padding: 30px 0 30px 32px;
+  background-color: white;
+  margin-bottom: 24px;
+  border-radius: 20px;
+  margin-left: 14px;
+}
+
+@mixin icone {
+  color: #7e7e7e;
+  padding-right: 25px;
+  font-size: 1em;
+}
+
+/* Variables Section Restaurants (Accueil) */
+
+/* Variables _Restaurants */
+
+@mixin header-restaurants {
+  .header-accueil {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding-bottom: 17px;
+    border-bottom: 2px solid #cfcfcf;
+  }
+  .fa-arrow-left {
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+@mixin fleche-gauche {
+  position: absolute;
+  font-size: 20px;
+  top: 30px;
+  left: 11px;
+  margin-left: 20px;
+  margin-right: 63px;
+}
+
 @mixin margin-carte {
   margin-top: 45px;
   margin-left: 20px;
@@ -169,13 +161,6 @@ ol {
   }
 }
 
-@mixin deco-carte {
-  padding-top: 5px;
-  padding-right: 40px;
-  margin-right: 316px;
-  border-bottom: 3px solid $couleur-tertiaire;
-}
-
 @mixin carte-contour {
   background-color: white;
   border-radius: 15px;
@@ -187,22 +172,29 @@ ol {
   margin-right: 14px;
 }
 
-/* MEDIA QUERIES */
+/* Variables Footer */
 
-@mixin mobile {
-  @media screen and (max-width: 500px) {
-    .header-accueil {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-      padding-bottom: 17px;
-      border-bottom: 2px solid #cfcfcf;
+@mixin padding-footer {
+  padding-left: 24px;
+  padding-top: 25px;
+  padding-bottom: 36px;
+}
 
-      & > a > .fa-arrow-left {
-        display: none;
-      }
-    }
-  }
+@mixin bouton {
+  color: white;
+  font-weight: 500;
+  padding: 1.02em 1.5em;
+  border-radius: 80px;
+  @include gradient;
+  @include shadow;
+}
+
+@mixin bouton-hover {
+  color: white;
+  font-weight: 500;
+  padding: 1.02em 1.5em;
+  border-radius: 80px;
+  @include shadow-hover;
 }
 
 /* Media Queries */
@@ -229,10 +221,12 @@ ol {
       &__cartes {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         margin-left: 50px;
         margin-right: 50px;
+        margin-bottom: 50px;
       }
 
       &__contenu {
@@ -246,6 +240,24 @@ ol {
       .carte-restaurants {
         width: 48%;
         height: 252px;
+      }
+    }
+
+    .restaurant__titre {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    .restaurant-contenu {
+      margin-left: 30px;
+      margin-right: 50px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .carte {
+        width: 375px;
       }
     }
   }

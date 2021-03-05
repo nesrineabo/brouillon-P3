@@ -1,10 +1,6 @@
 @import "./variables";
 @import "./animations";
-
-/*.image-fond {
-  position: absolute;
-  z-index: 0;
-}*/
+@import "./footer";
 
 header {
   @include header-restaurants;
@@ -42,12 +38,7 @@ header {
     margin-left: 20px;
     margin-right: 38px;
 
-    .coeur-bg {
-      position: absolute;
-      left: 18.559rem;
-      color: transparent;
-      font-size: 26px;
-    }
+    @include coeur;
 
     h1 {
       font-size: 1.7em;
