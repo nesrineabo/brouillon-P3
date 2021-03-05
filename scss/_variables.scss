@@ -38,7 +38,7 @@ a {
   padding-bottom: 36px;
 }
 
-@mixin flexcenter-0($direction) {
+@mixin flexcenter-direction($direction) {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,12 +135,24 @@ ol {
   margin-right: 63px;
 }
 
-@mixin coeur-hover {
-  .coeur-bg {
-    display: initial;
+@mixin coeur {
+  .coeur {
+    font-size: 23px;
+    display: inline-block;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #393939;
+    //background-size: 200px 200px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-position: 100%;
   }
-  .coeur-contour {
-    display: none;
+
+  .coeur:hover {
+    -webkit-text-stroke: transparent;
+    transform: scale (1.1);
+    animation-name: remplissage;
+    animation-duration: 3000ms;
+    animation-fill-mode: forwards;
   }
 }
 
@@ -193,22 +205,23 @@ ol {
   }
 }
 
-@mixin desktop {
-  @media screen and (min-width: 769px) and (max-width: 1440px) {
+/* Media Queries */
+
+@mixin non-mobile {
+  @media screen and (min-width: 501px) and (max-width: 1440px) {
     .fonctionnement {
-      margin: 0;
-
-      &__contenu {
-        display: flex;
-        margin-right: 0;
-      }
-
-      li {
-        margin-right: 0;
+      & > h2 {
+        margin-left: 50px;
       }
 
       &__liste {
-        width: 375px;
+        margin-left: 50px;
+        margin-right: 50px;
+        max-width: 100%;
+
+        &::before {
+          margin-left: 50px;
+        }
       }
     }
 
@@ -217,31 +230,22 @@ ol {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
+        margin-left: 50px;
+        margin-right: 50px;
       }
-    }
 
-    .carte-restaurants {
       &__contenu {
-        width: 450px;
-      }
-
-      &__image {
         width: 100%;
+
+        & > h2 {
+          margin-left: 50px;
+        }
       }
-    }
 
-    .restaurant-contenu {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-flow: row wrap;
-    }
-
-    .restaurant {
-      &__entrees,
-      &__plat,
-      &__dessert {
-        width: 400px;
+      .carte-restaurants {
+        width: 48%;
+        height: 252px;
       }
     }
   }

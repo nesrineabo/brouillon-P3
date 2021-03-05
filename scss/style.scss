@@ -1,16 +1,14 @@
-/*@import "./loader";*/
-@import "./variables";
-@import "./footer";
-@import "./restaurants";
 @import "./animations";
+@import "./footer";
+@import "./loader";
+@import "./restaurants";
+@import "./variables";
 
-body {
-  margin: 0;
-}
+@include non-mobile;
 
-a {
-  text-decoration: none;
-}
+/* Mise en page approche : Mobile-First */
+
+/* Disposition Logo SVG Header */
 
 .header-logo {
   display: block;
@@ -20,13 +18,9 @@ a {
   margin-bottom: 12px;
   height: 31px;
   width: 160px;
-
-  /*display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  padding-bottom: 17px;
-  border-bottom: 2px solid #cfcfcf;*/
 }
+
+/* Localisation Choix de la ville par le Client */
 
 .localisation {
   background-color: #eaeaea;
@@ -35,7 +29,6 @@ a {
   justify-content: center;
   padding: 20px 0;
   border-top: 1px solid #cfcfcf;
-  border-top-style: ;
 
   & > .fa-map-marker-alt {
     padding-right: 17px;
@@ -50,6 +43,8 @@ a {
     width: 135px;
   }
 }
+
+/* Présentation du Concept de OhMyFood */
 
 .presentation {
   background-color: $bg-gris-clair;
@@ -78,6 +73,8 @@ a {
     @include bouton-hover;
   }
 }
+
+/* Fonctionnement de OhMyFood */
 
 .fonctionnement {
   margin: 57px 20px 68px 20px;
@@ -132,6 +129,7 @@ a {
 }
 
 .restaurants {
+  @include non-mobile;
   background-color: $bg-gris-clair;
   padding-top: 60px;
 
@@ -145,12 +143,12 @@ a {
   }
 
   &__cartes {
-    @include flexcenter-0(column);
+    @include flexcenter-direction(column);
     margin: 0 20px 18px 20px;
   }
 
   .carte-restaurants {
-    width: 336px;
+    width: 100%;
     height: 252px;
     background-color: white;
     position: relative;
@@ -198,32 +196,9 @@ a {
   & .description-cartes {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-right: 22px;
   }
+
+  @include coeur;
 }
-
-.icone-favoris {
-  &__coeur {
-    position: relative;
-    margin-top: 15px;
-    margin-right: 25px;
-    font-size: 1.563em;
-    background-color: transparent;
-    border: 0px solid transparent;
-  }
-
-  &__coeur-bg {
-    display: none;
-  }
-
-  &::before {
-    opacity: 0;
-    transition-property: all;
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-    content: "\f004";
-    @include gradient;
-  }
-}
-
-@include desktop;

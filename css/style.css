@@ -1,4 +1,6 @@
-/*@import "./loader";*/
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
@@ -34,6 +36,29 @@ ol {
 }
 
 /* MEDIA QUERIES */
+/* Media Queries */
+/* Animation Coeur */
+@-webkit-keyframes remplissage {
+  100% {
+    -webkit-background-clip: text;
+    background-color: #ff79da;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes remplissage {
+  100% {
+    -webkit-background-clip: text;
+    background-color: #ff79da;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -66,6 +91,7 @@ ol {
 }
 
 /* MEDIA QUERIES */
+/* Media Queries */
 footer {
   background: #353535;
 }
@@ -115,6 +141,104 @@ footer {
   padding-right: 6px;
 }
 
+.chargement {
+  position: fixed;
+  z-index: 999999;
+  background: white;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  visibility: hidden;
+  -webkit-transition: visibility 3s;
+  transition: visibility 3s;
+}
+
+.chargement::after {
+  content: "";
+  visibility: hidden;
+}
+
+.loader1 {
+  height: 20px;
+  width: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: blueviolet;
+  /*border: 8px solid #ffffff;*/
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: -20px;
+  border-radius: 50%;
+  /*background-color: #f7c607;*/
+  -webkit-animation: move1 1.5s infinite;
+          animation: move1 1.5s infinite;
+}
+
+@-webkit-keyframes move1 {
+  50% {
+    left: 20px;
+    z-index: 0;
+  }
+  51% {
+    z-index: 2;
+  }
+  100% {
+    left: -20px;
+    z-index: 2;
+  }
+}
+
+@keyframes move1 {
+  50% {
+    left: 20px;
+    z-index: 0;
+  }
+  51% {
+    z-index: 2;
+  }
+  100% {
+    left: -20px;
+    z-index: 2;
+  }
+}
+
+.loader2 {
+  height: 20px;
+  width: 20px;
+  background-color: hotpink;
+  /*background-color: #ffffff;*/
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  right: 0;
+  border-radius: 50%;
+  -webkit-animation: move2 1.5s infinite;
+          animation: move2 1.5s infinite;
+}
+
+@-webkit-keyframes move2 {
+  50% {
+    left: -20px;
+  }
+  100% {
+    left: 20px;
+  }
+}
+
+@keyframes move2 {
+  50% {
+    left: -20px;
+  }
+  100% {
+    left: 20px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -147,6 +271,52 @@ ol {
 }
 
 /* MEDIA QUERIES */
+/* Media Queries */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* MEDIA QUERIES */
+/* Media Queries */
+/* Animation Coeur */
+@keyframes remplissage {
+  100% {
+    -webkit-background-clip: text;
+    background-color: #ff79da;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 /*.image-fond {
   position: absolute;
   z-index: 0;
@@ -418,14 +588,80 @@ header .fa-arrow-left {
   }
 }
 
-body {
+* {
   margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
 }
 
 a {
+  color: inherit;
   text-decoration: none;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* MEDIA QUERIES */
+/* Media Queries */
+@media screen and (min-width: 501px) and (max-width: 1440px) {
+  .fonctionnement > h2 {
+    margin-left: 50px;
+  }
+  .fonctionnement__liste {
+    margin-left: 50px;
+    margin-right: 50px;
+    max-width: 100%;
+  }
+  .fonctionnement__liste::before {
+    margin-left: 50px;
+  }
+  .restaurants__cartes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .restaurants__contenu {
+    width: 100%;
+  }
+  .restaurants__contenu > h2 {
+    margin-left: 50px;
+  }
+  .restaurants .carte-restaurants {
+    width: 48%;
+    height: 252px;
+  }
+}
+
+/* Mise en page approche : Mobile-First */
+/* Disposition Logo SVG Header */
 .header-logo {
   display: block;
   margin-left: auto;
@@ -434,13 +670,9 @@ a {
   margin-bottom: 12px;
   height: 31px;
   width: 160px;
-  /*display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  padding-bottom: 17px;
-  border-bottom: 2px solid #cfcfcf;*/
 }
 
+/* Localisation Choix de la ville par le Client */
 .localisation {
   background-color: #eaeaea;
   display: -webkit-box;
@@ -469,6 +701,7 @@ a {
   width: 135px;
 }
 
+/* Présentation du Concept de OhMyFood */
 .presentation {
   background-color: #f6f6f6;
   padding-top: 48px;
@@ -521,6 +754,7 @@ a {
           box-shadow: 0px 8px 20px 3px rgba(0, 0, 0, 0.25);
 }
 
+/* Fonctionnement de OhMyFood */
 .fonctionnement {
   margin: 57px 20px 68px 20px;
 }
@@ -592,6 +826,45 @@ a {
   padding-top: 60px;
 }
 
+@media screen and (min-width: 501px) and (max-width: 1440px) {
+  .restaurants .fonctionnement > h2 {
+    margin-left: 50px;
+  }
+  .restaurants .fonctionnement__liste {
+    margin-left: 50px;
+    margin-right: 50px;
+    max-width: 100%;
+  }
+  .restaurants .fonctionnement__liste::before {
+    margin-left: 50px;
+  }
+  .restaurants .restaurants__cartes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .restaurants .restaurants__contenu {
+    width: 100%;
+  }
+  .restaurants .restaurants__contenu > h2 {
+    margin-left: 50px;
+  }
+  .restaurants .restaurants .carte-restaurants {
+    width: 48%;
+    height: 252px;
+  }
+}
+
 .restaurants__contenu h2 {
   margin-top: 0;
   padding: 0;
@@ -617,7 +890,7 @@ a {
 }
 
 .restaurants .carte-restaurants {
-  width: 336px;
+  width: 100%;
   height: 252px;
   background-color: white;
   position: relative;
@@ -669,85 +942,31 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 22px;
 }
 
-.icone-favoris__coeur {
-  position: relative;
-  margin-top: 15px;
-  margin-right: 25px;
-  font-size: 1.563em;
-  background-color: transparent;
-  border: 0px solid transparent;
+.restaurants .coeur {
+  font-size: 23px;
+  display: inline-block;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px #393939;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-position: 100%;
 }
 
-.icone-favoris__coeur-bg {
-  display: none;
-}
-
-.icone-favoris::before {
-  opacity: 0;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-  content: "\f004";
-  background: #ff79da;
-  background: linear-gradient(176deg, #ff79da 0%, #9356dc 100%);
-}
-
-@media screen and (min-width: 769px) and (max-width: 1440px) {
-  .fonctionnement {
-    margin: 0;
-  }
-  .fonctionnement__contenu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-right: 0;
-  }
-  .fonctionnement li {
-    margin-right: 0;
-  }
-  .fonctionnement__liste {
-    width: 375px;
-  }
-  .restaurants__cartes {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .carte-restaurants__contenu {
-    width: 450px;
-  }
-  .carte-restaurants__image {
-    width: 100%;
-  }
-  .restaurant-contenu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-  }
-  .restaurant__entrees, .restaurant__plat, .restaurant__dessert {
-    width: 400px;
-  }
+.restaurants .coeur:hover {
+  -webkit-text-stroke: transparent;
+  -webkit-transform: scale 1.1;
+          transform: scale 1.1;
+  -webkit-animation-name: remplissage;
+          animation-name: remplissage;
+  -webkit-animation-duration: 3000ms;
+          animation-duration: 3000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 /*# sourceMappingURL=style.css.map */
