@@ -27,11 +27,7 @@ body {
 }
 
 a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 ul {
@@ -89,11 +85,7 @@ body {
 }
 
 a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 ul {
@@ -276,11 +268,7 @@ body {
 }
 
 a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 ul {
@@ -316,11 +304,7 @@ body {
 }
 
 a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 ul {
@@ -368,11 +352,7 @@ body {
 }
 
 a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 ul {
@@ -739,11 +719,7 @@ body {
 }
 
 a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 ul {
@@ -1034,7 +1010,7 @@ ol {
           animation-fill-mode: forwards;
 }
 
-@media screen and (min-width: 501px) and (max-width: 1440px) {
+@media screen and (min-width: 769px) and (max-width: 1440px) {
   .fonctionnement > h2 {
     margin-left: 50px;
   }
