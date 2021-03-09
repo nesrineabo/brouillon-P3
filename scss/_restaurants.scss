@@ -152,6 +152,18 @@ header {
     position: relative;
     width: 100%;
   }
+
+  .carte-entree-1__details--titre {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .carte-entree-1__details--paragraphe {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
 }
 
 .prix {

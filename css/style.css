@@ -662,6 +662,18 @@ header .fa-arrow-left {
   width: 100%;
 }
 
+.carte .carte-entree-1__details--titre {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.carte .carte-entree-1__details--paragraphe {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .prix {
   display: -webkit-box;
   display: -ms-flexbox;
