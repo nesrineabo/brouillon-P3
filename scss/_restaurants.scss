@@ -75,34 +75,93 @@ header {
 
 .carte {
   @include carte-contour;
+  position: relative;
+  display: flex;
+  height: 68px;
+  cursor: pointer;
+  padding-right: 0;
 
   h4 {
     margin: 0;
     padding-top: 15px;
     font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   p {
     margin: 0;
     padding-top: 6px;
     padding-bottom: 16px;
-    display: flex;
-    justify-content: space-between;
     font-weight: 300;
     font-size: 15px;
-  }
-
-  p :not(.prix) {
-    display: inline-block;
     text-overflow: ellipsis;
-    overflow: hidden;
     white-space: nowrap;
-    width: 250px;
+    overflow: hidden;
   }
 
-  .prix {
-    font-weight: 500;
+  &:hover &__confirmation {
+    background-color: $couleur-tertiaire;
+    transform: scale(1);
+    transform-origin: 50% 0%;
+    transition: 800ms;
+    width: 60px;
+    margin-right: 0;
+
+    .fa-check-circle {
+      transform: rotate(-360deg);
+      opacity: 1;
+      font-size: 20px;
+      transition: 400ms;
+    }
   }
+
+  &__confirmation {
+    background-color: $couleur-tertiaire;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+    padding-top: 24px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0px;
+    transition: 500ms;
+    position: relative;
+    color: white;
+
+    .fa-check-circle {
+      opacity: 0;
+      font-size: 1rem;
+      transition: 700ms;
+      position: absolute;
+      bottom: 25px;
+    }
+
+    &:hover .carte__contenu {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  &__contenu {
+    flex: 1;
+    position: relative;
+    width: 100%;
+  }
+}
+
+.prix {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  font-weight: 500;
+  right: 10px;
+  bottom: 10px;
 }
 
 .bouton-commander {
