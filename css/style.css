@@ -28,6 +28,7 @@ body {
 
 a {
   text-decoration: none;
+  color: unset;
 }
 
 ul {
@@ -86,6 +87,7 @@ body {
 
 a {
   text-decoration: none;
+  color: unset;
 }
 
 ul {
@@ -269,6 +271,7 @@ body {
 
 a {
   text-decoration: none;
+  color: unset;
 }
 
 ul {
@@ -305,6 +308,7 @@ body {
 
 a {
   text-decoration: none;
+  color: unset;
 }
 
 ul {
@@ -353,6 +357,7 @@ body {
 
 a {
   text-decoration: none;
+  color: unset;
 }
 
 ul {
@@ -503,6 +508,7 @@ header .fa-arrow-left {
 }
 
 .restaurant__titre h1 {
+  font-family: "Shrikhand", cursive;
   font-size: 1.7em;
   margin-top: 35px;
   margin-bottom: 0;
@@ -668,12 +674,6 @@ header .fa-arrow-left {
   overflow: hidden;
 }
 
-.carte .carte-entree-1__details--paragraphe {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
 .prix {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -793,6 +793,19 @@ header .fa-arrow-left {
   }
 }
 
+.carte-entree-1__details--paragraphe {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.carte__contenu p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 200px;
+}
+
 /* Font + Couleurs */
 /* Css Reset */
 * {
@@ -810,6 +823,7 @@ body {
 
 a {
   text-decoration: none;
+  color: unset;
 }
 
 ul {

@@ -41,6 +41,7 @@ header {
     @include coeur;
 
     h1 {
+      font-family: $titre-logo;
       font-size: 1.7em;
       margin-top: 35px;
       margin-bottom: 0;
@@ -158,12 +159,6 @@ header {
     white-space: nowrap;
     overflow: hidden;
   }
-
-  .carte-entree-1__details--paragraphe {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
 }
 
 .prix {
@@ -193,3 +188,18 @@ header {
 }
 
 @include carte-animation;
+
+.carte-entree-1__details--paragraphe {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.carte__contenu {
+  p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 200px;
+  }
+}
