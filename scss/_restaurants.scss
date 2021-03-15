@@ -37,8 +37,9 @@ header {
     margin-top: 0;
     margin-left: 20px;
     margin-right: 38px;
-
-    @include coeur;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     h1 {
       font-family: $titre-logo;

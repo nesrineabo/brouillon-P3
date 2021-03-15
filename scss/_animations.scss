@@ -63,3 +63,36 @@
     transform: translateX(0);
   }
 }
+
+.coeur__bg{
+  @include gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 3s linear forwards;
+  opacity: 0;
+
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.icone-favoris:hover .coeur__sansbg{
+  opacity: 0;
+}
+
+.icone-favoris{
+  position: relative;
+  width: 23px;
+  height: 23px;
+}
+
+.coeur__bg{
+  position: absolute;
+  text-align: center;
+}
+
+.coeur__sansbg{
+  position: absolute;
+  text-align: center;
+}
+
