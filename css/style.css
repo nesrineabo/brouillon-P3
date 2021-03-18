@@ -1086,6 +1086,7 @@ ol {
 .restaurants {
   background-color: #f6f6f6;
   padding-top: 60px;
+  padding-bottom: 30px;
 }
 
 .restaurants__contenu h2 {
