@@ -47,7 +47,7 @@ ol {
   padding: 0;
 }
 
-.fa-heart{
+.fa-heart {
   font-size: 23px;
 }
 
@@ -196,6 +196,12 @@ ol {
   padding: 1.02em 1.5em;
   border-radius: 80px;
   @include shadow-hover;
+  background: rgb(255, 144, 224);
+  background: linear-gradient(
+    176deg,
+    rgba(255, 144, 224, 1) 0%,
+    rgba(166, 96, 250, 1) 100%
+  );
 }
 
 /* Media Queries */
@@ -244,7 +250,7 @@ ol {
       }
     }
 
-    .icone-favoris--r{
+    .icone-favoris--r {
       margin-right: 20px;
     }
   }
@@ -270,7 +276,7 @@ ol {
       }
     }
 
-    .icone-favoris--r{
+    .icone-favoris--r {
       margin-right: 50px;
     }
   }
