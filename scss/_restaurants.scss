@@ -23,11 +23,10 @@ header {
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     top: -40px;
-    bottom: 60px;
+    bottom: -60px;
     background-color: $bg-gris-clair;
-    //padding-top: 25px;
     position: relative;
-    overflow: hidden;
+    //overflow: hidden;
     z-index: 1;
     height: auto;
     padding: 0;
@@ -40,6 +39,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include coeur-accueil;
+
+    .icone-favoris {
+      padding-top: 16px;
+    }
 
     h1 {
       font-family: $titre-logo;
@@ -87,9 +91,6 @@ header {
     margin: 0;
     padding-top: 15px;
     font-weight: 500;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
   }
 
   p {
@@ -141,35 +142,32 @@ header {
       position: absolute;
       bottom: 25px;
     }
-
-    &:hover .carte__contenu {
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-    }
   }
 
   &__contenu {
     flex: 1;
     position: relative;
-    width: 100%;
-  }
-
-  .carte-entree-1__details--titre {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+
+    &:hover {
+      width: 85%;
+    }
   }
 }
 
-.prix {
+.carte__prix {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  position: absolute;
-  font-weight: 500;
-  right: 10px;
-  bottom: 10px;
+  padding: 0 12px 12px 0;
+
+  .prix {
+    font-weight: 500;
+    right: 10px;
+    bottom: 10px;
+  }
 }
 
 .bouton-commander {
@@ -177,6 +175,7 @@ header {
   margin-bottom: 60px;
   display: flex;
   justify-content: center;
+  padding-bottom: 60px;
 }
 
 .commander {
@@ -189,18 +188,3 @@ header {
 }
 
 @include carte-animation;
-
-.carte-entree-1__details--paragraphe {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.carte__contenu {
-  p {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 200px;
-  }
-}

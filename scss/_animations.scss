@@ -1,5 +1,7 @@
 @import "./variables";
 
+/* Animation : Affichage des Cartes */
+
 @mixin carte-animation {
   .carte-entree-1__details-1 {
     animation: anim-carte 1000ms 200ms ease-in-out backwards;
@@ -55,43 +57,37 @@
 
 /* Animation Coeur */
 
-@keyframes remplissage {
-  100% {
+@mixin coeur-accueil {
+  .coeur__bg {
+    @include gradient;
     -webkit-background-clip: text;
-    background-color: $couleur-secondaire;
-    transform: translateY(-20px);
-    transform: translateX(0);
+    -webkit-text-fill-color: transparent;
+    transition: opacity 2s linear forwards;
+    opacity: 0;
+
+    &:hover {
+      opacity: 1;
+    }
   }
-}
 
-.coeur__bg {
-  @include gradient;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: opacity 3s linear forwards;
-  opacity: 0;
-
-  &:hover {
-    opacity: 1;
+  .icone-favoris:hover .coeur__sansbg {
+    opacity: 0;
+    color: $couleur-primaire;
   }
-}
 
-.icone-favoris:hover .coeur__sansbg {
-  opacity: 0;
-}
+  .icone-favoris {
+    position: relative;
+    width: 23px;
+    height: 23px;
+  }
 
-.icone-favoris {
-  position: relative;
-  width: 23px;
-  height: 23px;
-}
+  .coeur__bg {
+    position: absolute;
+    text-align: center;
+  }
 
-.coeur__bg {
-  position: absolute;
-  text-align: center;
-}
-
-.coeur__sansbg {
-  position: absolute;
-  text-align: center;
+  .coeur__sansbg {
+    position: absolute;
+    text-align: center;
+  }
 }

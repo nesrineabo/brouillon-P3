@@ -129,7 +129,7 @@
 .restaurants {
   background-color: $bg-gris-clair;
   padding-top: 60px;
-  padding-bottom: 30px;
+  padding-bottom: 44px;
 
   &__contenu {
     & h2 {
@@ -198,7 +198,7 @@
     margin-right: 22px;
   }
 
-  @include coeur;
+  @include coeur-accueil;
 }
 
 @include non-mobile;

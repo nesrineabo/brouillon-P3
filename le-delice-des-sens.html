@@ -9,10 +9,11 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Le délice des sens - Restaurant - OhMyFood</title>
+    <title>Le Délice Des Sens - Carte Restaurant - OhMyFood</title>
   </head>
 
   <body>
+    <!--Header flèche retour + logo-->
     <header class="header-fleche">
       <a href="./index.html">
         <i class="fas fa-arrow-left"></i>
@@ -24,35 +25,50 @@
       />
     </header>
 
-    <div class="restaurant__contenu">
-      <img
-        src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-        alt="Photo du restaurant La Note Echantée"
-        class="image-fond"
-      />
+    <!--Image de Fond -->
 
-      <section class="restaurant__menu">
-        <div class="restaurant__titre">
-          <h1>Le délice des sens</h1>
-          <div class="icone-favoris--r">
-            <i class="far fa-heart coeur__sansbg"></i>
-            <i class="fas fa-heart coeur__bg"></i>
-          </div>
+    <img
+      src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+      alt="Photo du restaurant Le délice des sens"
+      class="image-fond"
+    />
+
+    <!--Affichage du menu du restaurant-->
+
+    <section class="restaurant__menu">
+      <!--Titre Du Restaurant-->
+
+      <div class="restaurant__titre">
+        <h1>Le délice des sens</h1>
+        <div class="icone-favoris">
+          <i class="far fa-heart coeur__sansbg"></i>
+          <i class="fas fa-heart coeur__bg"></i>
         </div>
+      </div>
 
+      <!--Détail du menu du restaurant-->
+
+      <div class="restaurant-contenu">
+        <!--Entrées-->
         <div class="restaurant__entrees">
+          <!--Titre Entrées-->
           <div class="restaurant__entrees--titre">
             <h4>ENTRÉES</h4>
             <div class="titre-decoration"></div>
           </div>
 
+          <!--Contenu Entrées-->
           <div class="carte-entree-1">
             <div class="carte-entree-1__details-1 carte">
               <div class="carte__contenu">
                 <h4 class="carte-entree-1__details--titre">Tartare de thon</h4>
                 <p class="carte-entree-1__details--paragraphe">
-                  Assaisonné au yuzu<span class="prix">25€</span>
+                  Assaisonné au yuzu
                 </p>
+              </div>
+
+              <div class="carte__prix">
+                <div class="prix">25€</div>
               </div>
 
               <div class="carte__confirmation">
@@ -66,8 +82,12 @@
                   Bouchée de homard croustillant
                 </h4>
                 <p class="carte-entree-1__details--paragraphe">
-                  Et sa farandole de petits légumes<span class="prix">35€</span>
+                  Et sa farandole de petits légumes
                 </p>
+              </div>
+
+              <div class="carte__prix">
+                <div class="prix">35€</div>
               </div>
 
               <div class="carte__confirmation">
@@ -83,6 +103,10 @@
                 </p>
               </div>
 
+              <div class="carte__prix">
+                <div class="prix">20€</div>
+              </div>
+
               <div class="carte__confirmation">
                 <i class="fas fa-check-circle"></i>
               </div>
@@ -90,12 +114,16 @@
           </div>
         </div>
 
+        <!--Plats-->
+
         <div class="restaurant__plat">
+          <!--Titre Plats-->
           <div class="restaurant__plat--titre">
             <h4>PLATS</h4>
             <div class="titre-decoration"></div>
           </div>
 
+          <!--Contenu Plats-->
           <div class="carte-plat-2">
             <div class="carte-plat-2__details-1 carte">
               <div class="carte__contenu">
@@ -103,8 +131,12 @@
                   Poulet rôti aux herbes de Provence
                 </h4>
                 <p class="carte-plat-2__details--paragraphe">
-                  Et sa crème de truffe<span class="prix">40€</span>
+                  Et sa crème de truffe
                 </p>
+              </div>
+
+              <div class="carte__prix">
+                <div class="prix">40€</div>
               </div>
 
               <div class="carte__confirmation">
@@ -114,10 +146,14 @@
 
             <div class="carte-plat-2__details-2 carte">
               <div class="carte__contenu">
-                <h4 class="carte-plat-2__details--titre">Langoustine rôtie</h4>
+                <h4 class="carte-plat-2__details--titre">Langouste rôtie</h4>
                 <p class="carte-plat-2__details--paragraphe">
-                  Et ses légumes de saison<span class="prix">35€</span>
+                  Et ses légumes de saison
                 </p>
+              </div>
+
+              <div class="carte__prix">
+                <div class="prix">35€</div>
               </div>
 
               <div class="carte__confirmation">
@@ -131,8 +167,12 @@
                   Côte de boeuf Angus
                 </h4>
                 <p class="carte-plat-2__details--paragraphe">
-                  Et sa purée de panais<span class="prix">44€</span>
+                  Et sa purée de panais
                 </p>
+              </div>
+
+              <div class="carte__prix">
+                <div class="prix">44€</div>
               </div>
 
               <div class="carte__confirmation">
@@ -142,21 +182,27 @@
           </div>
         </div>
 
+        <!--Dessert-->
+
         <div class="restaurant__dessert">
+          <!--Titre Dessert-->
           <div class="restaurant__dessert--titre">
             <h4>DESSERTS</h4>
             <div class="titre-decoration"></div>
           </div>
 
+          <!--Contenu Dessert-->
           <div class="carte-dessert-3">
             <div class="carte-dessert-3__details-1 carte">
               <div class="carte__contenu">
                 <h4 class="carte-dessert-3__details--titre">
                   Farandole de desserts
                 </h4>
-                <p class="carte-dessert-3__details--paragraphe">
-                  Du chef<span class="prix">18€</span>
-                </p>
+                <p class="carte-dessert-3__details--paragraphe">Du chef</p>
+              </div>
+
+              <div class="carte__prix">
+                <div class="prix">18€</div>
               </div>
 
               <div class="carte__confirmation">
@@ -167,9 +213,11 @@
             <div class="carte-dessert-3__details-2 carte">
               <div class="carte__contenu">
                 <h4 class="carte-dessert-3__details--titre">Crème brûlée</h4>
-                <p class="carte-dessert-3__details--paragraphe">
-                  Revisitée<span class="prix">22€</span>
-                </p>
+                <p class="carte-dessert-3__details--paragraphe">Revisitée</p>
+              </div>
+
+              <div class="carte__prix">
+                <div class="prix">22€</div>
               </div>
 
               <div class="carte__confirmation">
@@ -181,8 +229,12 @@
               <div class="carte__contenu">
                 <h4 class="carte-dessert-3__details--titre">Tiramisu</h4>
                 <p class="carte-dessert-3__details--paragraphe">
-                  À la noisette<span class="prix">23€</span>
+                  À la noisette
                 </p>
+              </div>
+
+              <div class="carte__prix">
+                <div class="prix">23€</div>
               </div>
 
               <div class="carte__confirmation">
@@ -191,12 +243,16 @@
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="bouton-commander">
-          <a href="#"><button class="commander">Commander</button></a>
-        </div>
-      </section>
-    </div>
+      <!--Bouton Commander-->
+
+      <div class="bouton-commander">
+        <a href="#"><button class="commander">Commander</button></a>
+      </div>
+    </section>
+
+    <!--Footer-->
 
     <footer>
       <div class="footer-menu">
