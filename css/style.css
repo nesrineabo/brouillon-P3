@@ -803,6 +803,107 @@ header .fa-arrow-left {
   }
 }
 
+@media screen and (min-width: 1441px) {
+  .icone-favoris--r {
+    margin-right: 20px;
+  }
+  .restaurant-contenu {
+    margin-left: 30px;
+    margin-right: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .restaurant-contenu .carte {
+    width: 420px;
+  }
+}
+
+@media screen and (min-width: 1306px) and (max-width: 1440px) {
+  .restaurant__titre {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .restaurant-contenu {
+    margin-left: 30px;
+    margin-right: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .restaurant-contenu .carte {
+    width: 375px;
+  }
+  .icone-favoris--r {
+    margin-right: 50px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .fonctionnement > h2 {
+    margin-left: 50px;
+  }
+  .fonctionnement__liste {
+    margin-left: 50px;
+    margin-right: 50px;
+    max-width: 100%;
+  }
+  .fonctionnement__liste::before {
+    margin-left: 50px;
+  }
+  .restaurants__cartes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+  }
+  .restaurants__contenu {
+    width: 100%;
+  }
+  .restaurants__contenu > h2 {
+    margin-left: 50px;
+  }
+  .restaurants .carte-restaurants {
+    width: 48%;
+    height: 252px;
+  }
+  .icone-favoris--r {
+    margin-right: 20px;
+  }
+}
+
 /* Font + Couleurs */
 /* Css Reset */
 * {
@@ -1131,7 +1232,7 @@ ol {
   text-align: center;
 }
 
-@media screen and (min-width: 600px) and (max-width: 1440px) {
+@media screen and (min-width: 600px) {
   .fonctionnement > h2 {
     margin-left: 50px;
   }

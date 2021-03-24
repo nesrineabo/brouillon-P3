@@ -207,7 +207,7 @@ ol {
 /* Media Queries */
 
 @mixin non-mobile {
-  @media screen and (min-width: 600px) and (max-width: 1440px) {
+  @media screen and (min-width: 600px) {
     .fonctionnement {
       & > h2 {
         margin-left: 50px;
@@ -278,6 +278,27 @@ ol {
 
     .icone-favoris--r {
       margin-right: 50px;
+    }
+  }
+}
+
+@mixin grand-ecran {
+  @media screen and (min-width: 1441px) {
+    .icone-favoris--r {
+      margin-right: 20px;
+    }
+
+    .restaurant-contenu {
+      margin-left: 30px;
+      margin-right: 50px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .carte {
+        width: 420px;
+      }
     }
   }
 }
