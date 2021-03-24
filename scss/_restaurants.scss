@@ -40,6 +40,7 @@ header {
     align-items: center;
     justify-content: space-between;
     @include coeur-accueil;
+    @include animation-coeur;
 
     .icone-favoris {
       padding-top: 16px;
